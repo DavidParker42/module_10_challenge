@@ -43,7 +43,7 @@ function generateHtml(employees) {
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-    <div class="p-3 mb-2 bg-danger text-white">.bg-danger class="jumbotron jumbotron-fluid">
+    <div class="p-3 mb-2 bg-danger text-black" .bg-danger class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-4">My Team</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
