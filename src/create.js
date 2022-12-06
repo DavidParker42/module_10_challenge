@@ -1,61 +1,37 @@
 const Employee = require("../lib/Employee");
 const Engineer = require("../lib/Engineer");
 const Intern = require("../lib/Intern");
+//let employees = [{name:"genarateManager",id:1, ... other properties}];
 
-function generateHtml(array){
-    let html
-    for (let i = 0; i < array.length; i++) {
-        const employee = array[i];
+function generateHtml(employees) {
+   let html = ''
+    for (let i = 0; i < employees.length; i++) {
+        const employee = employees[i];
         let special
-        if(employee.getRole()==='Manager'){
-        special = employee.getOfficeNumber()
-        }else if(employee.getRole()==='Engineer'){
+        if (employee.getRole() === 'Manager') {
+            special = employee.getOfficeNumber()
+        } else if (employee.getRole() === 'Engineer') {
             special = employee.getGitHub()
-        }else{special = employee.getSchool()
+        } else {
+            special = employee.getSchool()
+
         }
-        html+= ` <div class="card-body">
-        //     <h5 class="card-title">Information</h5>
-        //     <p class="card-text">${employee.name}</p>
-        //     <p class="card-text">${employee.id}</p>
-        //     <p class="card-text">${employee.email}</p>
-        //     <p class="card-text">${special}</p>
-        //   </div>`}
+        html += `
 
-// {/* <div class="card" style="width: 18rem;">
-//   <div class="card-body">
-//     <h5 class="card-title">Information</h5>
-//     <p class="card-text">${employee.name}</p>
-//     <p class="card-text">${employee.id}</p>
-//     <p class="card-text">${employee.email}</p>
-//     <p class="card-text">${special}</p>
-//   </div>
-// </div> */}
+        <div class="col">
+        <div class="card">
+        <div class="card-body">
+        <h5 class="card-title">Employee Information</h5>
+        <p class="card-text">${employee.name}</p>
+        <p class="card-text">${employee.id}</p>
+        <p class="card-text">${employee.email}</p>
+        <p class="card-text">${special}</p>
+        </div>
+        </div>
+        </div>
 
-        // }
-        // html+=`
-        // <div>
-        // <h1>${employee.name}</h1>
-        // <h2>${employee.id}</h2>
-        // <h2>${employee.email}</h2>
-        // <h2>${employee.officeNumber}</h2>
-        // <h2>${employee.team}</h2>
-        // </div>
-        // <div>
-        // <h1>${Engineer.engineerName}</h1>
-        // <h2>${Engineer.engineerId}</h2>
-        // <h2>${Engineer.engineerEmil}</h2>
-        // <h2>${Engineer.engineerGithub}</h2>
-        // <h2>${Engineer.engineerTeam}</h2>
-        // </div>
-        // <div>
-    //     <h1>${Intern.internName}</h1>
-    //     <h2>${Intern.internId}</h2>
-    //     <h2>${Intern.internEmail}</h2>
-    //     <h2>${Intern.internSchool}</h2>
-    //     <h2>${Intern.team}</h2>
-    //     </div>
-    //     `
-    // }
+        `
+    }
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -63,9 +39,18 @@ function generateHtml(array){
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-    ${html} 
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">My Team</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      ${html}
+      </div>
+    </div>
+  </div>
     </body>
     </html>`
 }
