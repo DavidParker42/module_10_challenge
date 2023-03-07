@@ -5,6 +5,7 @@
   1. [Description](#description)
   2. [Video](#video)
   3. [Email](#email)
+  4. [Github](#github)
   4. [Collaborators](#collaborators)
   
   ## Description
@@ -16,6 +17,8 @@
   ## Email
   david.m.parker92@gmail.com
 
+  ## Github
+  https://github.com/DavidParker42?tab=repositories
 
   ## Collaborators
-  I worked with other classmates in study groups, students such as Ama Frema.
+  https://github.com/Afrema90
