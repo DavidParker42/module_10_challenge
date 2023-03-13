@@ -4,4 +4,6 @@ describe('engineerClass', () => {
   it('Can set github by constructor', () => {
     expect(new Engineer(null, null, null, "github").github).toBe("github");
   });
+
+
 });
