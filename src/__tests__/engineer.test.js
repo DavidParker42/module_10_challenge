@@ -1,4 +1,5 @@
 const Engineer = require("../../lib/engineer.js");
+console.log;
 
 describe('engineerClass', () => {
   it('Can set github by constructor', () => {
