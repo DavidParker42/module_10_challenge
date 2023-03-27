@@ -6,7 +6,9 @@
   2. [Video](#video)
   3. [Email](#email)
   4. [Github](#github)
-  4. [Collaborators](#collaborators)
+  5. [Application Type](#application-type)
+  6. [Collaborators](#collaborators)
+  
   
   ## Description
   Command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
@@ -20,6 +22,9 @@
 
   ## Github
   https://github.com/DavidParker42?tab=repositories
+
+  ## Application Type
+  OOP
 
   ## Collaborators
   https://github.com/Afrema90
